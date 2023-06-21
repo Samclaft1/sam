@@ -1,0 +1,60 @@
+import numpy as np
+
+
+
+def grab():
+    tipo = input("Ingrese el tipo de su vehiculo: ")
+    patente = input("Ingrese la patente de us vehiculo: ")
+    marca = input("ingrese la marca de su vehiculo: ")
+    preciovehi = int(input("ingrese el valor de su vehiculo: "))
+    if preciovehi < 5000000:
+            print("Valor Erroneo")
+    multa = int(input("Ingrese el valor se la multa de su vehiculo; si no tiene marque 0: "))
+    fechareg = input("ingresse fecha de registro de su vehiculo: ")
+    nombredueño = input("ingrese nombre del dueño: ")
+
+def buscar(patente):
+    if patente in storage:
+          return (storage[patente])
+    else:
+        return("Patente no Encontrada")
+
+
+
+######################################################################################:c
+opcion = 0
+storage = {}
+while opcion != 4:
+    
+    print("       BIENVENIDO A AUTO SEGURO")
+    print("-" *50)
+    print()
+    print("1). GRABAR ")
+    print("2). BUSCAR  ")
+    print("3). IMPRIMIR CERTIFICADOS ")
+    print("4). Salir. ")
+    opcion = int(input("          ingrese una opcion: "))
+    print("-" *50)
+   
+    if opcion == 1:
+        print("Ingreso a la opcion grabar, ingrese los siguientes datos: ")
+        print()
+        grab()
+    else:
+        if opcion == 2:
+              print("Ingreso a la opcion buscar,")
+              print()
+              patente = input("ingrese su numero de patente: ")
+              print(buscar( patente ))
+        else:
+            if opcion == 3:
+                    print()
+            else:
+                 if opcion ==4:
+            
+                    opcion = input("Ingrese X si está seguro de salir, de otra manera pulse cualquier tecla para volver al inicio del menú.")
+                    opcion = opcion.upper()
+                    if opcion == "X":
+                        print("Gracias")
+                        break        
+                        
